@@ -1,10 +1,10 @@
-# Data Scientist
+# Data Science Analyst
 
 #### Technical Skills: Python, SQL, AWS, MS Excel, Power BI, Machine Learning
 
 ## Education
 - MCA (Master of Computer Applications) in AI-ML	| Jain University, Bengaluru (_January 2024 to December 2025_)	 			        		
-- B.Sc., Biotechnology | Osmania University, Hyderabad (_June 2019 to July 2022_)
+- B.Sc., Biotechnology                            | Osmania University, Hyderabad (_June 2019 to July 2022_)
 
 ## Work Experience
 **Data Science Analyst @ Accenture (_January 2023 - Present_)**
