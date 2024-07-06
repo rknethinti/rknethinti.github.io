@@ -4,12 +4,15 @@
 
 ## Education
 - MCA (Master of Computer Applications) in AI-ML	| Jain University, Bengaluru (_January 2024 to December 2025_)	 			        		
-- B.Sc., Biotechnology                            | Osmania University, Hyderabad (_June 2019 to July 2022_)
+- B.Sc (Bachelor of Science) in Biotechnology     | Osmania University, Hyderabad (_June 2019 to July 2022_)
 
 ## Work Experience
 **Data Science Analyst @ Accenture (_January 2023 - Present_)**
-- Uncovered and corrected missing step in production data pipeline which impacted over 70% of active accounts
-- Redeveloped loan originations model which resulted in 50% improvement in model performance and saving 1 million dollars in potential losses
+-Performed data analysis on large datasets using tools such as Excel, SQL, Python and Power BI.
+-Developed dashboards and reports to communicate insights and trends to business stakeholders.
+-Identified data quality issues and implemented data cleaning and normalization techniques.
+-Collaborated with business analysts and data scientists(L2) to design and implement data-driven solutions that meet business needs.
+-Developed and maintained data models and databases to support business operations.
 
 ## Projects
 ### Rossmann Stores Sales Prediction
