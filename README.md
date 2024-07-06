@@ -8,11 +8,11 @@
 
 ## Work Experience
 **Data Science Analyst @ Accenture (_January 2023 - Present_)**
--Performed data analysis on large datasets using tools such as Excel, SQL, Python and Power BI.
--Developed dashboards and reports to communicate insights and trends to business stakeholders.
--Identified data quality issues and implemented data cleaning and normalization techniques.
--Collaborated with business analysts and data scientists(L2) to design and implement data-driven solutions that meet business needs.
--Developed and maintained data models and databases to support business operations.
+- Performed data analysis on large datasets using tools such as Excel, SQL, Python and Power BI.
+- Developed dashboards and reports to communicate insights and trends to business stakeholders.
+- Identified data quality issues and implemented data cleaning and normalization techniques.
+- Collaborated with business analysts and data scientists(L2) to design and implement data-driven solutions that meet business needs.
+- Developed and maintained data models and databases to support business operations.
 
 ## Projects
 ### Rossmann Stores Sales Prediction
