@@ -38,10 +38,10 @@ Conducted a detailed analysis of Airbnb bookings to uncover insights and trends 
 
 
 ## Industry Certifications
-### IBM Certified Data Science Professional
-### Google Cloud Digital Leader
-### Data Analytics and visualization Specialization from IBM|Coursera
-### Oracle certified Artificial Intelligence Associate
+#### IBM Certified Data Science Professional
+#### Google Cloud Digital Leader
+#### Data Analytics and visualization Specialization from IBM|Coursera
+#### Oracle certified Artificial Intelligence Associate
 
 
 
