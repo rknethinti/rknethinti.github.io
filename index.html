@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ramakrishna Nethinti — AWS DevOps & Cloud Platform Engineer</title>
+  <meta name="description" content="AWS DevOps Engineer and Cloud Platform Engineer with 3+ years of experience. 9 certifications. Top 1% at Accenture. Based in Hyderabad, India." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ═══════════════════════════════════════════════════
+       TOKENS
+    ═══════════════════════════════════════════════════ */
+    :root {
+      --navy:      #0F2444;
+      --navy-mid:  #1B3A6B;
+      --electric:  #4A9EFF;
+      --electric-dim: #2979CC;
+      --surface:   #F7F9FC;
+      --white:     #FFFFFF;
+      --ink:       #111827;
+      --ink-mid:   #374151;
+      --ink-light: #6B7280;
+      --border:    #E5EAF2;
+      --tag-bg:    #EBF3FF;
+      --tag-text:  #1B3A6B;
+      --mono:      'JetBrains Mono', monospace;
+      --sans:      'Inter', system-ui, sans-serif;
+      --radius:    6px;
+      --transition: 220ms ease;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESET
+    ═══════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    img { display: block; }
+
+    /* ═══════════════════════════════════════════════════
+       NAV
+    ═══════════════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+    }
+    .nav-brand {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+    }
+    .nav-brand span { color: var(--electric); }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--ink-mid);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color var(--transition);
+    }
+    .nav-links a:hover { color: var(--electric); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 0.4rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.78rem !important;
+      font-weight: 600 !important;
+      transition: background var(--transition) !important;
+    }
+    .nav-cta:hover { background: var(--navy-mid) !important; color: var(--white) !important; }
+
+    /* ═══════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--navy) 0%, #0A1C38 55%, #0D2547 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 7rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* grid lines — signature element */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(74,158,255,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(74,158,255,0.06) 1px, transparent 1px);
+      background-size: 48px 48px;
+      pointer-events: none;
+    }
+    /* radial glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(74,158,255,0.12) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 820px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--electric);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 28px; height: 1px;
+      background: var(--electric);
+    }
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+    }
+    h1 .highlight {
+      color: var(--electric);
+    }
+    .hero-tagline {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: rgba(255,255,255,0.6);
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2.5rem;
+      margin-bottom: 2.75rem;
+      flex-wrap: wrap;
+    }
+    .stat {
+      display: flex;
+      flex-direction: column;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+    .stat-number span { color: var(--electric); }
+    .stat-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.45);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 0.3rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--electric);
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      letter-spacing: 0.01em;
+      transition: background var(--transition), transform var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-primary:hover { background: #69B1FF; transform: translateY(-1px); }
+    .btn-ghost {
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+      font-weight: 500;
+      font-size: 0.85rem;
+      padding: 0.75rem 1.75rem;
+      border-radius: var(--radius);
+      transition: border-color var(--transition), color var(--transition), transform var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-ghost:hover {
+      border-color: var(--electric);
+      color: var(--electric);
+      transform: translateY(-1px);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════════════ */
+    .section {
+      padding: 5rem 2rem;
+    }
+    .section-alt { background: var(--white); }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--electric-dim);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+    .section-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════════════ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+    .about-text p {
+      color: var(--ink-mid);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+    .about-text p strong { color: var(--ink); }
+    .about-contact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      padding: 0.65rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: border-color var(--transition);
+    }
+    .contact-item:hover { border-color: var(--electric); color: var(--electric-dim); }
+    .contact-icon {
+      font-size: 0.9rem;
+      width: 20px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       SKILLS
+    ═══════════════════════════════════════════════════ */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 1.25rem;
+    }
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.4rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .skill-card:hover {
+      border-color: var(--electric);
+      box-shadow: 0 0 0 3px rgba(74,158,255,0.08);
+    }
+    .skill-card-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--electric-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-family: var(--mono);
+    }
+
+    /* ═══════════════════════════════════════════════════
+       EXPERIENCE
+    ═══════════════════════════════════════════════════ */
+    .timeline {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--electric) 0%, var(--border) 100%);
+    }
+    .job {
+      position: relative;
+      margin-bottom: 2.75rem;
+    }
+    .job::before {
+      content: '';
+      position: absolute;
+      left: -1.5rem;
+      top: 6px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--electric);
+      border: 2px solid var(--white);
+      box-shadow: 0 0 0 2px var(--electric);
+    }
+    .job-header {
+      margin-bottom: 0.75rem;
+    }
+    .job-company {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .job-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--electric-dim);
+      font-style: italic;
+      margin-top: 0.1rem;
+    }
+    .job-meta {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.3rem;
+      flex-wrap: wrap;
+    }
+    .job-meta span {
+      font-size: 0.75rem;
+      color: var(--ink-light);
+      font-family: var(--mono);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .job-bullets {
+      padding-left: 0;
+      margin-top: 0.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .job-bullets li {
+      font-size: 0.865rem;
+      color: var(--ink-mid);
+      line-height: 1.6;
+      padding-left: 1rem;
+      position: relative;
+    }
+    .job-bullets li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--electric);
+      font-size: 0.8rem;
+    }
+    .job-bullets li strong { color: var(--ink); }
+    .job-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.9rem;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       CERTIFICATIONS
+    ═══════════════════════════════════════════════════ */
+    .certs-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+    .cert-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      transition: border-color var(--transition), box-shadow var(--transition);
+    }
+    .cert-card:hover {
+      border-color: var(--electric);
+      box-shadow: 0 4px 16px rgba(74,158,255,0.1);
+    }
+    .cert-icon {
+      font-size: 1.4rem;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+    .cert-name {
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.4;
+    }
+    .cert-code {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--electric-dim);
+      margin-top: 0.25rem;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       ACHIEVEMENTS
+    ═══════════════════════════════════════════════════ */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.1rem;
+    }
+    .achievement-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--electric);
+      border-radius: var(--radius);
+      padding: 1.1rem 1.25rem;
+      transition: box-shadow var(--transition);
+    }
+    .achievement-card:hover {
+      box-shadow: 0 4px 20px rgba(74,158,255,0.1);
+    }
+    .achievement-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 0.35rem;
+    }
+    .achievement-desc {
+      font-size: 0.8rem;
+      color: var(--ink-mid);
+      line-height: 1.55;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       EDUCATION
+    ═══════════════════════════════════════════════════ */
+    .edu-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .edu-degree {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .edu-school {
+      font-size: 0.85rem;
+      color: var(--ink-mid);
+      margin-top: 0.2rem;
+    }
+    .edu-meta {
+      text-align: right;
+    }
+    .edu-date {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--ink-light);
+    }
+    .edu-cgpa {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--electric-dim);
+      margin-top: 0.25rem;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════ */
+    footer {
+      background: var(--navy);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+    .footer-sub {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 1.5rem;
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--electric); }
+
+    /* ═══════════════════════════════════════════════════
+       ANIMATIONS
+    ═══════════════════════════════════════════════════ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .achievements-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+      .edu-card { flex-direction: column; }
+      .edu-meta { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-in { opacity: 1; transform: none; transition: none; }
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ─────────────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-brand">RK<span>.</span>Nethinti</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </div>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">AWS DevOps &amp; Cloud Platform Engineer</div>
+    <h1>Ramakrishna<br><span class="highlight">Nethinti</span></h1>
+    <p class="hero-tagline">Building scalable cloud infrastructure that ships fast and stays up.</p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-number">3<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">98<span>%</span></div>
+        <div class="stat-label">Deployment Time Reduced</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">10</div>
+        <div class="stat-label">Cloud Certifications</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">Top <span>1%</span></div>
+        <div class="stat-label">TechLeap Assessment</div>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="Ramakrishna_Nethinti_ATS_Resume.docx" download class="btn-primary">
+        ↓ Download Resume
+      </a>
+      <a href="#experience" class="btn-ghost">View Experience →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── ABOUT ───────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="section-label">Background</div>
+    <h2 class="section-title">About Me</h2>
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>
+          I'm an <strong>AWS DevOps Engineer and Cloud Platform Engineer</strong> with 3+ years of hands-on experience architecting, automating, and operating production infrastructure across on-premises, hybrid, and AWS cloud environments.
+        </p>
+        <p>
+          Currently at <strong>Tata Consultancy Services (TCS)</strong>, leading cloud infrastructure modernization — migrating critical business applications from EOL servers to AWS, managing EKS/ECS workloads, and driving IaC-first operations with Terraform and Harness.
+        </p>
+        <p>
+          At <strong>Accenture</strong>, I was ranked in the <strong>top 1%</strong> of engineers after clearing the TechLeap Cloud & DevOps assessment, recognized as a <em>Multi-Skilled Champion (FY25)</em>, and designated an <em>Accenture Expert</em> — all within my first year.
+        </p>
+        <p>
+          I hold <strong>10 industry certifications</strong> across AWS, Azure, and Google Cloud and am passionate about reducing toil through automation, keeping systems highly available, and making deployments boring (reliably fast).
+        </p>
+      </div>
+      <div class="about-contact fade-in" id="contact">
+        <a href="mailto:rknethinti@gmail.com" class="contact-item">
+          <span class="contact-icon">✉</span>rknethinti@gmail.com
+        </a>
+        <a href="tel:+919966690150" class="contact-item">
+          <span class="contact-icon">☎</span>+91 9966690150
+        </a>
+        <span class="contact-item">
+          <span class="contact-icon">📍</span>Hyderabad, Telangana, India
+        </span>
+        <a href="https://linkedin.com/in/rknethinti" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon">in</span>linkedin.com/in/rknethinti
+        </a>
+        <a href="https://github.com/rknethinti" target="_blank" rel="noopener" class="contact-item">
+          <span class="contact-icon">⌥</span>github.com/rknethinti
+        </a>
+        <span class="contact-item">
+          <span class="contact-icon">🌐</span>Open to global remote roles
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS ──────────────────────────────────────────────────────── -->
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-label">Technical Stack</div>
+    <h2 class="section-title">Core Competencies</h2>
+    <div class="skills-grid">
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">Cloud Platforms</div>
+        <div class="skill-tags">
+          <span class="tag">AWS</span><span class="tag">EC2</span><span class="tag">VPC</span>
+          <span class="tag">IAM</span><span class="tag">S3</span><span class="tag">EKS</span>
+          <span class="tag">ECS</span><span class="tag">ECR</span><span class="tag">CloudWatch</span>
+          <span class="tag">ALB/NLB</span><span class="tag">Route 53</span><span class="tag">Auto Scaling</span>
+          <span class="tag">Azure</span><span class="tag">GCP</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">CI/CD &amp; DevOps</div>
+        <div class="skill-tags">
+          <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span>
+          <span class="tag">Harness CI/CD</span><span class="tag">Harness IaCM</span>
+          <span class="tag">Git</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">Containers &amp; Orchestration</div>
+        <div class="skill-tags">
+          <span class="tag">Docker</span><span class="tag">Kubernetes</span>
+          <span class="tag">Amazon EKS</span><span class="tag">Amazon ECS</span>
+          <span class="tag">Helm</span><span class="tag">AKS</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">IaC &amp; Config Management</div>
+        <div class="skill-tags">
+          <span class="tag">Terraform</span><span class="tag">Ansible</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">Monitoring &amp; Observability</div>
+        <div class="skill-tags">
+          <span class="tag">Prometheus</span><span class="tag">Grafana</span>
+          <span class="tag">CloudWatch</span><span class="tag">New Relic</span>
+          <span class="tag">Elasticsearch</span><span class="tag">Fluentd</span>
+          <span class="tag">Kibana</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">Scripting &amp; Automation</div>
+        <div class="skill-tags">
+          <span class="tag">Python</span><span class="tag">Bash</span>
+          <span class="tag">Shell Scripting</span><span class="tag">YAML</span>
+          <span class="tag">Groovy</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">SRE &amp; Incident Management</div>
+        <div class="skill-tags">
+          <span class="tag">PagerDuty</span><span class="tag">MIM</span>
+          <span class="tag">RCA</span><span class="tag">MTTR</span>
+          <span class="tag">SLA/SLO</span><span class="tag">On-Call</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">Security &amp; Networking</div>
+        <div class="skill-tags">
+          <span class="tag">IAM</span><span class="tag">Security Groups</span>
+          <span class="tag">SSL/TLS</span><span class="tag">DNS</span>
+          <span class="tag">TCP/IP</span><span class="tag">Firewalls</span>
+          <span class="tag">Load Balancing</span>
+        </div>
+      </div>
+
+      <div class="skill-card fade-in">
+        <div class="skill-card-title">DevOps Tools</div>
+        <div class="skill-tags">
+          <span class="tag">Nexus Repository</span><span class="tag">SonarQube</span>
+          <span class="tag">JIRA</span><span class="tag">Confluence</span>
+          <span class="tag">CloudAware CMDB</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ──────────────────────────────────────────────────── -->
+<section class="section section-alt" id="experience">
+  <div class="container">
+    <div class="section-label">Career</div>
+    <h2 class="section-title">Professional Experience</h2>
+    <div class="timeline">
+
+      <!-- TCS -->
+      <div class="job fade-in">
+        <div class="job-header">
+          <div class="job-company">Tata Consultancy Services (TCS)</div>
+          <div class="job-title">Cloud Platform Engineer</div>
+          <div class="job-meta">
+            <span>📅 May 2026 – Present</span>
+            <span>📍 Hyderabad, India</span>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Led large-scale cloud infrastructure modernization, migrating critical applications from <strong>EOL servers to AWS</strong> with zero unplanned downtime.</li>
+          <li>Provisioned and managed cloud infrastructure using <strong>Terraform</strong> and <strong>Harness IaCM</strong>, following IaC best practices.</li>
+          <li>Built and maintained <strong>CI/CD pipelines using Harness CI/CD</strong> to automate build, test, deployment, and release processes.</li>
+          <li>Deployed and managed containerized workloads on <strong>Amazon EKS and Amazon ECS</strong>, managing Kubernetes manifests and cluster scaling.</li>
+          <li>Configured observability using <strong>New Relic</strong> and integrated <strong>PagerDuty</strong> for incident alerting and on-call support.</li>
+          <li>Worked extensively with AWS services: <strong>EC2, VPC, IAM, S3, ECR, CloudWatch, ALB/NLB, Route 53, Auto Scaling</strong>.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Harness</span>
+          <span class="tag">EKS</span><span class="tag">ECS</span><span class="tag">Docker</span>
+          <span class="tag">New Relic</span><span class="tag">PagerDuty</span>
+        </div>
+      </div>
+
+      <!-- Accenture Infra Analyst -->
+      <div class="job fade-in">
+        <div class="job-header">
+          <div class="job-company">Accenture</div>
+          <div class="job-title">Infra Analyst — DevOps Engineer</div>
+          <div class="job-meta">
+            <span>📅 Jun 2024 – May 2026</span>
+            <span>📍 Hyderabad, India</span>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Designed and maintained <strong>CI/CD pipelines using Jenkins and GitHub Actions</strong> for automated build, release, and deployment.</li>
+          <li>Delivered end-to-end deployment automation, <strong>reducing deployment time from ~6 hours to under 5 minutes (98% reduction)</strong>.</li>
+          <li>Implemented IaC using <strong>Terraform</strong> and config automation using <strong>Ansible</strong> for version-controlled infrastructure provisioning.</li>
+          <li>Integrated <strong>Nexus Repository</strong> for artifact management and <strong>SonarQube</strong> for static code analysis and quality gates.</li>
+          <li>Supported containerized workloads on <strong>Kubernetes</strong> using Docker, YAML manifests, and <strong>Helm</strong> charts.</li>
+          <li>Built centralized logging with the <strong>EFK stack</strong> and monitoring with <strong>Prometheus, Grafana, and CloudWatch</strong>.</li>
+          <li>Led <strong>Major Incident Management (MIM)</strong> bridge calls for high-severity outages and drove service restoration within SLA.</li>
+          <li>Performed <strong>RCA</strong> for recurring incidents and implemented preventive fixes to reduce MTTR.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="tag">Jenkins</span><span class="tag">GitHub Actions</span><span class="tag">Terraform</span>
+          <span class="tag">Ansible</span><span class="tag">Kubernetes</span><span class="tag">Helm</span>
+          <span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">EFK</span>
+        </div>
+      </div>
+
+      <!-- Accenture Associate -->
+      <div class="job fade-in">
+        <div class="job-header">
+          <div class="job-company">Accenture</div>
+          <div class="job-title">Application Development Associate — DevOps &amp; Networking</div>
+          <div class="job-meta">
+            <span>📅 Jan 2023 – May 2024</span>
+            <span>📍 Hyderabad, India</span>
+          </div>
+        </div>
+        <ul class="job-bullets">
+          <li>Supported and operated <strong>production infrastructure and enterprise applications</strong>, ensuring high availability and SLA compliance.</li>
+          <li>Administered <strong>Linux-based systems</strong>, resolving service failures, performance bottlenecks, and environment incidents.</li>
+          <li>Network troubleshooting: <strong>DNS, TCP/IP, SSL/TLS</strong>, routing, and firewall-related incidents.</li>
+          <li>Supported <strong>CI/CD pipelines</strong>, on-premises and hybrid environments, and automation with Python, Ansible, and Bash.</li>
+          <li>Applied <strong>DevOps and SRE best practices</strong> to reduce operational toil and improve platform reliability.</li>
+        </ul>
+        <div class="job-tags">
+          <span class="tag">Linux</span><span class="tag">Python</span><span class="tag">Ansible</span>
+          <span class="tag">CI/CD</span><span class="tag">SRE</span><span class="tag">Networking</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── CERTIFICATIONS ──────────────────────────────────────────────── -->
+<section class="section" id="certifications">
+  <div class="container">
+    <div class="section-label">Credentials</div>
+    <h2 class="section-title">10 Industry Certifications</h2>
+    <div class="certs-grid">
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">☁️</div>
+        <div>
+          <div class="cert-name">AWS Certified Solutions Architect – Associate</div>
+          <div class="cert-code">SAA-C03</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">☁️</div>
+        <div>
+          <div class="cert-name">AWS Certified Cloud Practitioner</div>
+          <div class="cert-code">CLF-C02</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🔷</div>
+        <div>
+          <div class="cert-name">Microsoft Certified: Azure DevOps Expert</div>
+          <div class="cert-code">AZ-400</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🔷</div>
+        <div>
+          <div class="cert-name">Microsoft Certified: Azure Administrator Associate</div>
+          <div class="cert-code">AZ-104</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🟡</div>
+        <div>
+          <div class="cert-name">Google Cloud: Professional Cloud DevOps Engineer</div>
+          <div class="cert-code">Google Cloud Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🟡</div>
+        <div>
+          <div class="cert-name">Google Cloud: Professional Cloud Architect</div>
+          <div class="cert-code">Google Cloud Certified</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🟡</div>
+        <div>
+          <div class="cert-name">Google Cloud: Cloud Digital Leader</div>
+          <div class="cert-code">CDL</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">⚙️</div>
+        <div>
+          <div class="cert-name">GitHub Certified: GitHub Actions</div>
+          <div class="cert-code">GH-200</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🔐</div>
+        <div>
+          <div class="cert-name">Skillsoft Certified SecOps Engineer</div>
+          <div class="cert-code">System Infrastructure Security</div>
+        </div>
+      </div>
+
+      <div class="cert-card fade-in">
+        <div class="cert-icon">🤖</div>
+        <div>
+          <div class="cert-name">Reinvention with Agentic AI</div>
+          <div class="cert-code">Accenture / Stanford HAI · Jan 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── ACHIEVEMENTS ────────────────────────────────────────────────── -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-label">Recognition</div>
+    <h2 class="section-title">Key Achievements</h2>
+    <div class="achievements-grid">
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-title">🏅 Top 1% — TechLeap Cloud &amp; DevOps</div>
+        <div class="achievement-desc">Promoted within one year at Accenture after clearing the rigorous TechLeap Cloud &amp; DevOps assessment, ranking among the top 1% of engineers organization-wide.</div>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-title">⚡ 98% Deployment Time Reduction</div>
+        <div class="achievement-desc">Reduced SMP application deployment time from ~6 hours to under 5 minutes through end-to-end CI/CD automation with Jenkins, GitHub Actions, and Terraform.</div>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-title">🏆 Multi-Skilled Champion FY25</div>
+        <div class="achievement-desc">Recognized at Accenture for demonstrating breadth and depth across DevOps, automation, and infrastructure, contributing to high-impact client outcomes.</div>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-title">⭐ Accenture Expert Designation</div>
+        <div class="achievement-desc">Designated "Accenture Expert" under the myCompetency Experts@myC program for high-impact contributions across DevOps, SRE, and infrastructure domains.</div>
+      </div>
+
+      <div class="achievement-card fade-in">
+        <div class="achievement-title">🎓 State Level 1st Rank</div>
+        <div class="achievement-desc">Achieved State Level 1st Rank in the Medha Sampoorna Shiksha Test and was awarded a full merit-based education scholarship.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ───────────────────────────────────────────────────── -->
+<section class="section">
+  <div class="container">
+    <div class="section-label">Academic Background</div>
+    <h2 class="section-title">Education</h2>
+    <div style="display:flex; flex-direction:column; gap:1rem;">
+      <div class="edu-card fade-in">
+        <div>
+          <div class="edu-degree">Master of Computer Applications (MCA)</div>
+          <div class="edu-school">Jain University · Bengaluru, India</div>
+        </div>
+        <div class="edu-meta">
+          <div class="edu-date">Jun 2024 – Apr 2026</div>
+          <div class="edu-cgpa">CGPA: 9.26 / 10</div>
+        </div>
+      </div>
+      <div class="edu-card fade-in">
+        <div>
+          <div class="edu-degree">Bachelor of Science (B.Sc.) in Biotechnology</div>
+          <div class="edu-school">Siddhartha Degree &amp; PG College · Hyderabad, India</div>
+        </div>
+        <div class="edu-meta">
+          <div class="edu-date">Jun 2019 – Jul 2022</div>
+          <div class="edu-cgpa">CGPA: 8.6 / 10</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ──────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-name">Ramakrishna Nethinti</div>
+  <div class="footer-sub">AWS DevOps Engineer · Cloud Platform Engineer · SRE Practitioner</div>
+  <div class="footer-links">
+    <a href="mailto:rknethinti@gmail.com">✉ rknethinti@gmail.com</a>
+    <a href="https://linkedin.com/in/rknethinti" target="_blank" rel="noopener">in LinkedIn</a>
+    <a href="https://github.com/rknethinti" target="_blank" rel="noopener">⌥ GitHub</a>
+    <a href="Ramakrishna_Nethinti_ATS_Resume.docx" download>↓ Resume</a>
+  </div>
+</footer>
+
+<script>
+  // Scroll-triggered fade-ins
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        // stagger cards within a grid
+        const siblings = entry.target.parentElement.querySelectorAll('.fade-in');
+        let delay = 0;
+        siblings.forEach((el, idx) => {
+          if (el === entry.target) delay = idx * 60;
+        });
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Active nav link highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 80) current = s.id;
+    });
+    navLinks.forEach(a => {
+      a.style.color = a.getAttribute('href') === '#' + current ? 'var(--electric)' : '';
+    });
+  }, { passive: true });
+</script>
+</body>
+</html>
